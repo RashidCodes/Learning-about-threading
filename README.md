@@ -5,6 +5,7 @@ It's easy to assume that different processors are running your program independe
 
 If a task spends most of its time waiting for external events then its a good idea to implement threading however, if the task is CPU intensive then threading may not be of much use at all.
 
+<br/>
 
 ## Threading example
 ```python
@@ -38,6 +39,7 @@ This is how the thread is created:
 x = threading.Thread(target=thread_function, args=(1,))
 ```
 
+<br/>
 
 # Daemon Threads
 
@@ -51,13 +53,14 @@ x = threading.Thread(target=thread_function, args=(1,), daemon=True)
 
 You'll notice that the final output of the program is missing.
 
+<br/>
 
 ## <code>join()</code> a Thread 
 
 What if you want a thread to stop **without exiting the program**? Enter the ```join()``` method. The ```join()``` method of a thread is used to the thread to pause and wait for another thread to finish.
 
 
-
+<br/>
 
 # The <code>ThreadPoolExecutor</code>
 
@@ -79,9 +82,12 @@ if __name__ == "__main__":
 
 ```
 
+<br/>
 
 # Race conditions
 When writing threaded programs, a **race condition** can occur if two or more threads try to access a share piece of data or a resource.
+
+<br/>
 
 ## An example of a race condition
 
@@ -108,6 +114,7 @@ class FakeDatabase:
 		logging.info("Thread %s: finishing update", name)
 
 
+<br/>
 
 # How to use the Fakedatabase
 if __name__ == "__main__":
@@ -128,6 +135,7 @@ if __name__ == "__main__":
 
 
 ```
+<br/>
 
 ## The ```.submit()``` signature
 ```python
@@ -136,11 +144,12 @@ if __name__ == "__main__":
 
 Visit https://realpython.com/intro-to-python-threading/ for a full explanation of a race condition. 
 
-
+<br/>
 
 # REMEMBER!
 The operating system can swap which thread is running *at any time*. A thread can be swapped out after any of these small instructions. This means that **a thread can be put to sleep to let another thread run in the middle of a Python statement**.
 
+<br/>
 
 # Synchronization using a Lock
 
@@ -177,6 +186,7 @@ class FakeDatabase:
 # Try running this with the Fakedatabase above
 ```
 
+<br/>
 
 # Producer-Consumer Threading
 
