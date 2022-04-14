@@ -114,7 +114,6 @@ class FakeDatabase:
 		logging.info("Thread %s: finishing update", name)
 
 
-<br/>
 
 # How to use the Fakedatabase
 if __name__ == "__main__":
